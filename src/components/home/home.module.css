@@ -1,0 +1,21 @@
+body {
+    background-color: #1abc9c !important;  
+    color: white !important;
+}
+
+img {
+    width: 300px ;
+}
+.home.line{
+    width: 30px !important;
+    height: 30px !important;
+    background-color: white !important;
+}
+.home.i{
+    font-size: 15px;
+}
+.home.main{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}

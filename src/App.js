@@ -1,25 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Portfolio from './components/portfolio/Portfolio';
+import Contact from './components/contact/Contact';
+import Layout from './components/layout/layout';
+import Navbar from './components/navbar/Navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const router = createBrowserRouter([
+  {path: '', element:<Layout/>, children:[
+   { path: '', element: <Home />},
+{ path: 'about', element: <About /> },
+{ path: 'portfolio', element: <Portfolio /> },
+{ path: 'contact', element: <Contact /> },
+{ path: 'navbar', element: <Navbar /> },
+{path: "*" , element:<>
+<div className='d-flex'>
+  <h1>not found</h1>
+</div>
+
+</>}
+  ]}
+]);
+
+export default class App extends Component {
+  render(){
+  return ( 
+  <>
+  <RouterProvider router={router} />
+  </>
   );
 }
+}
 
-export default App;

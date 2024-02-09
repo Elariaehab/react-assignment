@@ -1,0 +1,28 @@
+.port{
+    background-color: white;
+}
+.imglayer{
+    width: 100% ; 
+    height: 100% ; 
+    background-color:#1abc9ce6 ; 
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s;
+display: flex;
+align-items: center;
+justify-content: center;    
+
+}
+.imaage{
+    position: relative;
+}
+.imaage:hover .imglayer{
+opacity: 1;
+cursor: pointer;
+}
+.port h2{
+    color:#2c3e50 ;
+    text-align: center;
+    font-weight: bold;
+}
